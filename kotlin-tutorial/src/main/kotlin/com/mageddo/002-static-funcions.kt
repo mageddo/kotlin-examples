@@ -1,10 +1,8 @@
 package com.mageddo
 
-import java.util.*
-
 fun main() {
 	println(myStaticFunc())
-	println(Arrays.toString(Car.getAllBrands()))
+	println(mapper.writeValueAsString(Car.getAllBrands()))
 }
 
 fun myStaticFunc(): String {
