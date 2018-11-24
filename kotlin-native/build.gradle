@@ -1,0 +1,18 @@
+plugins {
+	id "org.jetbrains.kotlin.konan" version "1.3.10" // para gerar binario
+	id "org.jetbrains.kotlin.jvm" version "1.3.10" // para poder programar normalmente no intellij usando jvm
+}
+
+repositories {
+	mavenCentral()
+}
+
+konanArtifacts {
+	program("app") {
+		enableOptimizations(true)
+	}
+}
+
+dependencies {
+	compile "org.jetbrains.kotlin:kotlin-stdlib"
+}
