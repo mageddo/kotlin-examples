@@ -2,7 +2,7 @@ package com.mageddo
 
 fun main() {
 	println(myStaticFunc())
-	println(mapper.writeValueAsString(Car.getAllBrands()))
+	println(mapper.writeValueAsString(Car.getBrands()))
 }
 
 fun myStaticFunc(): String {
@@ -11,9 +11,9 @@ fun myStaticFunc(): String {
 	""".trimMargin()
 }
 
-class Car(var model: String) {
+class Car(var model: String){
 	companion object {
-		fun getAllBrands(): Array<String> {
+		fun getBrands(): Array<String> {
 			return arrayOf("Nissan", "Audi", "Lamborghini")
 		}
 	}
