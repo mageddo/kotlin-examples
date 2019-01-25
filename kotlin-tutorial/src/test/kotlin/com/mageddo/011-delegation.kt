@@ -1,9 +1,7 @@
 package com.mageddo
 
-import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Assertions.assertThrows
 import org.junit.jupiter.api.Test
-import java.lang.Exception
 
 class DelegationTest {
 	@Test
