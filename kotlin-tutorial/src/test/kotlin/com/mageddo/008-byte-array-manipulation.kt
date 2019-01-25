@@ -12,43 +12,26 @@ class ByteArrayManipulationTest {
 		val data = byteArrayOf(69, 108, 118, 105, 115, 0, 0, 0, 23)
 		val user = extractUser(data)
 		assertEquals(69, data[0])
-		assertEquals(23, user.getAge())
-		assertEquals("Elvis", user.getName())
+		assertEquals(23, user.age)
+		assertEquals("Elvis", user.name)
 	}
 
 }
 
 fun extractUser(userData: ByteArray): User {
-	return User()
-		.setName(String(Arrays.copyOfRange(userData, 0, 5)))
-		.setAge(ByteBuffer.wrap(Arrays.copyOfRange(userData, 5, 9)).getInt())
+	return User(
+		name = String(Arrays.copyOfRange(userData, 0, 5)),
+		age = ByteBuffer.wrap(Arrays.copyOfRange(userData, 5, 9)).getInt()
+	)
 }
 
 class User {
 
-	private var name: String?
-	private var age: Int
+	val name: String?
+	val age: Int
 
-	constructor(){
-		this.name = null
-		this.age = 0
-	}
-
-	fun getName(): String? {
-		return name
-	}
-
-	fun setName(name: String): User {
+	constructor(name: String? = null, age: Int = 0){
 		this.name = name
-		return this
-	}
-
-	fun getAge(): Int {
-		return age
-	}
-
-	fun setAge(age: Int): User {
 		this.age = age
-		return this
 	}
 }
