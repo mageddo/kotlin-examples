@@ -1,5 +1,7 @@
 package com.mageddo
 
+import com.mageddo.utils.mapper
+
 fun main() {
 	println(myStaticFunc())
 	println(mapper.writeValueAsString(Car.getBrands()))

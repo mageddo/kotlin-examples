@@ -1,4 +1,4 @@
-package com.mageddo;
+package com.mageddo.utils;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;

@@ -1,5 +1,6 @@
 package com.mageddo
 
+import com.mageddo.utils.JavaWatcher
 import kotlin.reflect.KClass
 
 @Target(AnnotationTarget.CLASS, AnnotationTarget.FUNCTION)
